@@ -1,0 +1,18 @@
+<Zoom>:
+    id: my_zoom
+    Image:
+        source: 'foo.png'
+        allow_stretch: True
+        keep_ratio: True
+
+<Main_app>:
+    id: main_shows
+    GridLayout:
+        rows: 2
+
+        BoxLayout:
+            Zoom:
+
+        Button:
+            size_hint_y: 0.3
+            text: 'You will be ok'

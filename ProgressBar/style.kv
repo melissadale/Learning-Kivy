@@ -1,0 +1,15 @@
+<Main_app>:
+    loading_pb: load_pb
+
+    GridLayout:
+        rows: 2
+        MyProgressBar:
+            id: load_pb
+            value: 0
+            min: 0
+            max: 100
+
+        Button:
+            text: 'Start Progress Bar'
+            on_press:
+                root.dummy()

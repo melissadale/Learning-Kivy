@@ -1,0 +1,26 @@
+<Main_app>:
+    name_list_lbl: name_list_lbl
+
+    GridLayout:
+        rows: 3
+        Label:
+            id: name_list_lbl
+            size_hint_y: 0.6
+            color: 0, 0, 0, 1
+            text: 'Stored Names: \n'
+
+        BoxLayout:
+            size_hint_y: 0.2
+            Label:
+                text: 'name'
+                color: 0, 0, 0, 1
+
+            TextInput:
+                id: new_name
+                multiline: False
+
+        Button:
+            size_hint_y: 0.2
+            text: 'Start Progress Bar'
+            on_press:
+                root.add_name(new_name.text)

@@ -1,0 +1,30 @@
+<Main_app>:
+    id: main_shows
+    GridLayout:
+        rows: 2
+        cols: 2
+
+        Button:
+            id:demo_button
+            background_normal: ''
+            background_color: 1, 1, 1, 1
+
+            canvas:
+                Rectangle:
+                    size:demo_button.size
+                    pos:self.pos
+                    source:'./foo.png'
+            on_press:
+                root.btn_push()
+
+        Label:
+            text: 'Label 1'
+            color: 0,1,0,1
+
+        Label:
+            text: 'Label 2'
+            color: 0,1,0,1
+
+        Label:
+            text: 'Label 3'
+            color: 0,1,0,1

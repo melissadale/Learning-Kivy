@@ -1,0 +1,28 @@
+<PanelLayout>:
+    name: 'main_screen'
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+    TabbedPanel:
+        size_hint: 1, 1
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        do_default_tab: False
+        tab_width: self.size[0]/len(self.tab_list)
+
+        background_color: (1, 1, 1, 1)
+        background_image: 'path/to/background/image'
+
+        TabbedPanelItem:
+            text: 'Tab1'
+            Foo:
+
+        TabbedPanelItem:
+            text: 'Tab2'
+
+        TabbedPanelItem:
+            text: 'Tab3'

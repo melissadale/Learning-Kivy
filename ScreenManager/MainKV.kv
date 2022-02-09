@@ -1,0 +1,54 @@
+<WindowManager>:
+    MainWindow:
+    DirectoryScreen:
+
+<MainWindow>:
+    name: "main"
+
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Password: "
+
+            TextInput:
+                id: passw
+                multiline: False
+
+        Button:
+            text: "Submit"
+            on_release:
+                app.root.current = "directory_screen"
+                root.manager.transition.direction = "left"
+
+<DirectoryScreen>:
+    name: "directory_screen"
+    #background_color: (1, 1, 1, 1)    # White colour
+
+    GridLayout:
+        rows: 2
+
+        FileChooserIconView:
+            id: filechooser
+            path: '.'
+
+        BoxLayout:
+            size_hint_y: 0.2
+
+            Button:
+                text: 'Select'
+                size_hint_x: .5
+                on_press:
+                    root.change_text(filechoose.path)
+                    root.manager.transition.direction = 'right'
+                    root.manager.current = 'main_screen'
+
+            Button:
+                text: 'Cancel'
+                size_hint_x: .5
+                on_press:
+                    root.manager.transition.direction = 'right'
+                    root.manager.current = 'main_screen'
